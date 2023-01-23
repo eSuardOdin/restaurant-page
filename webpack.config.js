@@ -6,16 +6,24 @@ module.exports = {
         index: './src/index.js',
         print: './src/print.js',
     },
+    mode: 'development',
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+    },
+    optimization:{
+        runtimeChunk: 'single',
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Output Management',
         }),
     ],
+    devtool: 'inline-source-map', // In order to know wich file is throwing error
+    devServer: {
+        static: './dist',
+    },
     module: {
         rules: [
             {
