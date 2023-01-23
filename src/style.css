@@ -1,4 +1,9 @@
 .test {
     font-size: 3rem;
     color: rgb(134, 90, 23);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    
 }

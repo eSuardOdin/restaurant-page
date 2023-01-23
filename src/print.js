@@ -1,3 +1,4 @@
-export default function printMe() {
-    console.log('got called from print.js');
+export default function printPage(baseElement, pageElement) {
+    baseElement.innerHTML = '';
+    baseElement.appendChild(pageElement);
 };

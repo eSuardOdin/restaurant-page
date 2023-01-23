@@ -3,8 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
-        index: './src/index.js',
-        print: './src/print.js',
+        about:    './src/about.js',
+        homepage: './src/homepage.js',
+        index:    './src/index.js',
+        print:    './src/print.js',
     },
     mode: 'development',
     output: {
@@ -17,7 +19,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Output Management',
+            title: 'Restaurant',
         }),
     ],
     devtool: 'inline-source-map', // In order to know wich file is throwing error
