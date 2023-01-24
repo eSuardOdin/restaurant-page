@@ -1,5 +1,5 @@
 export default function getHomepage() {
     const element = document.createElement('div');
-    element.innerHTML = 'HOMEPAGE';
+    element.innerHTML = 'Homepage';
     return element;
 }

@@ -1,5 +1,5 @@
 export default function getAboutpage() {
     const element = document.createElement('div');
-    element.innerHTML = 'ABOUT';
+    element.innerHTML = 'About us';
     return element;
 }

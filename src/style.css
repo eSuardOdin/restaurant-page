@@ -1,9 +1,21 @@
-.test {
+* {
+    padding: 0;
+    margin: 0;
+}
+.header {
     font-size: 3rem;
     color: rgb(134, 90, 23);
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    
 }
+.main-page {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 200px 1fr;
+}
+.page-container {
+    background: url('./images/cofee-jason-villanueva.jpg');
+    background-size: 100vw auto
+} 
