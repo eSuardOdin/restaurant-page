@@ -3,19 +3,34 @@
     margin: 0;
 }
 .header {
-    font-size: 3rem;
-    color: rgb(134, 90, 23);
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: rgb(191, 181, 165);
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
+    background-color: rgba(12, 14, 9, 0.7);
+    box-shadow: 0px 5px 5px 0px #080807;
 }
 .main-page {
     height: 100vh;
     display: grid;
     grid-template-rows: 200px 1fr;
+    background: url('./images/cofee-jason-villanueva.jpg');
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
 }
 .page-container {
-    background: url('./images/cofee-jason-villanueva.jpg');
-    background-size: 100vw auto
-} 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-element {
+    background-color: rgba(206, 218, 184, 0.7);
+    width: 65vw;
+    box-shadow: 0px 0px 10px 5px #080807;
+    height: 450px;
+}
+

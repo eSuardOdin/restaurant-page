@@ -39,10 +39,11 @@ function component() {
     const container = document.createElement('div');
     container.classList.add('page-container');
     printPage(container, getHomepage());
-    const myBgImg = new Image();
-    myBgImg.src = bgImg;
-    myBgImg.height = document.v
-    container.appendChild(myBgImg); 
+    // const myBgImg = new Image();
+    // myBgImg.src = bgImg;
+    // myBgImg.width = '100vw';
+    // myBgImg.height = 'auto';
+    // container.appendChild(myBgImg); 
 
 
     
