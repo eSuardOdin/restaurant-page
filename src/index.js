@@ -10,15 +10,23 @@ function component() {
 // -------------- Creation of tabs/buttons --------------------
     const btnHomePage = document.createElement('button');
     btnHomePage.innerHTML = 'HOMEPAGE';
-    btnHomePage.onclick =  () => printPage(container, getHomepage());
+    btnHomePage.onclick =  () => {
+        printPage(container, getHomepage());
+        mainPage.classList.add('img-background');
+    } 
 
     const btnAbout = document.createElement('button');
     btnAbout.innerHTML = 'ABOUT';
-    btnAbout.onclick =  () => printPage(container, getAboutpage());
-
+    btnAbout.onclick =  () => {
+        printPage(container, getAboutpage());
+        mainPage.classList.remove('img-background');
+    }
     const btnContact = document.createElement('button');
     btnContact.innerHTML = 'CONTACT';
-    btnContact.onclick =  () => printPage(container, getContactpage());
+    btnContact.onclick =  () => {
+        printPage(container, getContactpage());
+        mainPage.classList.remove('img-background');
+    }
 // -------------------------------------------------------------
 
 
@@ -39,12 +47,6 @@ function component() {
     const container = document.createElement('div');
     container.classList.add('page-container');
     printPage(container, getHomepage());
-    // const myBgImg = new Image();
-    // myBgImg.src = bgImg;
-    // myBgImg.width = '100vw';
-    // myBgImg.height = 'auto';
-    // container.appendChild(myBgImg); 
-
 
     
     
@@ -52,6 +54,7 @@ function component() {
     mainPage.appendChild(header);
     mainPage.appendChild(container);
     mainPage.classList.add('main-page');
+    mainPage.classList.add('img-background');
     return mainPage;
 }
 
