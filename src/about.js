@@ -1,3 +1,5 @@
+import createArticle from "./createArticle";
+
 export default function getAboutpage() {
     const pageTitle = document.createElement('div');
     pageTitle.classList.add('page-title');
@@ -5,11 +7,11 @@ export default function getAboutpage() {
 
     const pageContent = document.createElement('div');
     pageContent.classList.add('page-content');
-    pageContent.innerHTML = `
-    <p>Lorem necessitatibus et incidunt fuga. Delectus quas eum voluptates quibusdam odio architecto adipisci nulla consectetur corrupti temporibus doloremque inventore officiis quae nihil, qui non reiciendis necessitatibus. Rem optio soluta animi inventore nemo repellendus dicta rerum ipsum deserunt, nam quae, dolore illum adipisci ex, culpa quidem blanditiis. Doloremque nihil ipsum deleniti obcaecati!</p>
-    `;
+    // pageContent.innerHTML = `
+    // <p>Lorem necessitatibus et incidunt fuga. Delectus quas eum voluptates quibusdam odio architecto adipisci nulla consectetur corrupti temporibus doloremque inventore officiis quae nihil, qui non reiciendis necessitatibus. Rem optio soluta animi inventore nemo repellendus dicta rerum ipsum deserunt, nam quae, dolore illum adipisci ex, culpa quidem blanditiis. Doloremque nihil ipsum deleniti obcaecati!</p>
+    // `;
 
-
+    pageContent.appendChild(createArticle('/home/wan/repos/restaurant-page/src/images/small/coffee-grains.jpg', 'Our coffee is not responsible for polar bear deaths', 'Eco responsible coffee', true));
 
     const element = document.createElement('div');
     element.appendChild(pageTitle);

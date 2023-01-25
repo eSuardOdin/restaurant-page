@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
+        createArticle: './src/createArticle.js',
         about:    './src/about.js',
         contact:    './src/contact.js',
         homepage: './src/homepage.js',

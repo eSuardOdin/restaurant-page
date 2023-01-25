@@ -19,7 +19,7 @@
     display: grid;
     grid-template-rows: 200px 1fr;
     gap: 15px;
-    background-color: #bd6a1c;
+    background-color: #b96d26;
 }
 
 .img-background {
@@ -52,11 +52,34 @@
 
 
 
-
-.article-container-left {
+.article-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.article-title{
+    font-size: 2rem;
+}
+.article-text-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+.article-image-left {
+    grid-column: 1/2;
 }
 
-.article-image {
+.article-image-right {
+    grid-column: 2/3;
+}
 
+.article-text-left {
+    grid-column: 1/2;
+}
+
+.article-text-right {
+    grid-column: 2/3;
 }
