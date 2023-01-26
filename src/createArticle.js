@@ -17,14 +17,24 @@ export default function createArticle(src, txt, title, isRight) {
     
     // Elements content
     articleImg.src = src;
+    articleImg.height = "300";
+    // -------- NEED TO RESIZE IMG ----------
     articleText.innerText = txt;
     articleTitle.innerText = title;
 
     // Append Child
-    articleTextContainer.appendChild(articleTitle);
-    articleTextContainer.appendChild(articleText);
-    articleContainer.appendChild(articleTextContainer);
-    articleContainer.appendChild(articleImg);
+    if (isRight) {
+        articleTextContainer.appendChild(articleTitle);
+        articleTextContainer.appendChild(articleText);
+        articleContainer.appendChild(articleTextContainer);
+        articleContainer.appendChild(articleImg);
+    } else {
+        articleContainer.appendChild(articleImg);
+        articleTextContainer.appendChild(articleTitle);
+        articleTextContainer.appendChild(articleText);
+        articleContainer.appendChild(articleTextContainer);
+    }
+    
 
     return articleContainer;
 }
