@@ -1,4 +1,4 @@
-* {
+/** {
     padding: 0;
     margin: 0;
 }
@@ -36,7 +36,6 @@
     background-color: rgba(206, 218, 184, 0.7);
     width: 65vw;
     box-shadow: 0px 0px 10px 5px #080807;
-    /* height: 450px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,4 +81,48 @@
 
 .article-text-right {
     grid-column: 2/3;
+}
+
+
+*/
+
+
+
+
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */
+/* --------------- DEUXIEME VERSION --------------- */
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.full-page-container{
+    display: grid;
+    grid-template-rows: 200px 1fr 100px;
+}
+
+.header {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(12, 14, 9, 0.7);
+    box-shadow: 0px 5px 5px 0px #080807;
+}
+.header-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+.header-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: rgb(191, 181, 165);
+    grid-column: 1/4;
 }

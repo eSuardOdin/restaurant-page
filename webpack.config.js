@@ -3,12 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
-        createArticle: './src/createArticle.js',
-        about:    './src/about.js',
-        contact:    './src/contact.js',
-        homepage: './src/homepage.js',
+        // createArticle: './src/createArticle.js',
+        // about:    './src/about.js',
+        // contact:    './src/contact.js',
+        // homepage: './src/homepage.js',
         index:    './src/index.js',
         print:    './src/print.js',
+
+        // V2
+        fullPage: './src/fullPage-v2.js',
+        header: './src/header-v2.js',
     },
     mode: 'development',
     output: {
