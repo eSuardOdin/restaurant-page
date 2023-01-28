@@ -71,6 +71,20 @@ import './style.css';
 import printPage from './print';
 import getFullPage from './fullPage-v2';
 import getHeader from './header-v2';
+import getBody from './body-v2';
+import getFooter from './footer-v2';
+import getHomepage from './homePage-v2';
 const fullPage = getFullPage();
-fullPage.appendChild(getHeader());
+const header = getHeader();
+const body = getBody();
+const footer = getFooter();
+
+body.appendChild(getHomepage());
+
+fullPage.appendChild(header);
+fullPage.appendChild(body);
+fullPage.appendChild(footer);
+fullPage.classList.add('home-background');
+
 document.body.appendChild(fullPage);
+

@@ -104,6 +104,7 @@
 .full-page-container{
     display: grid;
     grid-template-rows: 200px 1fr 100px;
+    
 }
 
 .header {
@@ -125,4 +126,40 @@
     letter-spacing: 4px;
     color: rgb(191, 181, 165);
     grid-column: 1/4;
+}
+
+
+/* BACKGROUNDS DEPENDING ON PAGE */
+.home-background {
+    background: url('./images/cofee-jason-villanueva.jpg');
+    background-size: 100vw auto; 
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    /* align-items: center; */
+}
+
+.page-element {
+    background-color: rgba(206, 218, 184, 0.7);
+    width: 65vw;
+    box-shadow: 0px 0px 10px 5px #080807;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+    padding: 10px;
 }

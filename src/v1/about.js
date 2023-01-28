@@ -1,4 +1,4 @@
-import createArticle from "./createArticle";
+import createArticle from "../createArticle";
 import coffeImg from './images/small/coffee-grains.jpg';
 import cheeseCakeImg from './images/small/pexels-wendy-wei-3071870.jpg';
 import cookiesImg from './images/small/pexels-anete-lusina-4792397.jpg';
