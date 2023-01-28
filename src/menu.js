@@ -1,18 +1,19 @@
-import createArticle from "../createArticle";
-import coffeImg from './images/small/coffee-grains.jpg';
+import createArticle from "./createArticle";
+
+import coffeImg from './images/small/pexels-chevanon-photography-312418.jpg';
 import cheeseCakeImg from './images/small/pexels-wendy-wei-3071870.jpg';
 import cookiesImg from './images/small/pexels-anete-lusina-4792397.jpg';
 
-export default function getAboutpage() {
+export default function getMenuPage() {
     const pageTitle = document.createElement('div');
     pageTitle.classList.add('page-title');
-    pageTitle.innerHTML = 'About Us';
+    pageTitle.innerHTML = 'Our Menu';
 
     const pageContent = document.createElement('div');
     pageContent.classList.add('page-content');
     
     // Page articles
-    pageContent.appendChild(createArticle(coffeImg, 'Our coffee is not responsible for polar bear deaths', 'Eco responsible coffee', true));
+    pageContent.appendChild(createArticle(coffeImg, 'Our coffee is the best in town.', 'Sweet coffee', true));
 
     pageContent.appendChild(createArticle(cheeseCakeImg, 'Some tasty cheescake with the topping of your choice', 'Cheescake', false));
 

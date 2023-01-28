@@ -17,7 +17,7 @@ export default function createArticle(src, txt, title, isRight) {
     
     // Elements content
     articleImg.src = src;
-    articleImg.height = "300";
+    articleImg.height = "700";
     // -------- NEED TO RESIZE IMG ----------
     articleText.innerText = txt;
     articleTitle.innerText = title;

@@ -9,10 +9,8 @@ module.exports = {
         // homepage: './src/homepage.js',
         index:    './src/index.js',
         print:    './src/print.js',
-
-        // V2
-        fullPage: './src/fullPage-v2.js',
-        header: './src/header-v2.js',
+        fullPage: './src/fullPage.js',
+        header: './src/header.js',
     },
     mode: 'development',
     output: {

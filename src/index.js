@@ -1,79 +1,12 @@
-// import _ from "lodash";
-// import './style.css';
-// import printPage from './print';
-// import getHomepage from "./homepage";
-// import getAboutpage from "./about";
-// import getContactpage from "./contact";
-// import bgImg from './images/cofee-jason-villanueva.jpg'
-
-// function component() {
-// // -------------- Creation of tabs/buttons --------------------
-//     const btnHomePage = document.createElement('button');
-//     btnHomePage.innerHTML = 'HOMEPAGE';
-//     btnHomePage.onclick =  () => {
-//         printPage(container, getHomepage());
-//         mainPage.classList.add('img-background');
-//     } 
-
-//     const btnAbout = document.createElement('button');
-//     btnAbout.innerHTML = 'ABOUT';
-//     btnAbout.onclick =  () => {
-//         printPage(container, getAboutpage());
-//         mainPage.classList.remove('img-background');
-//     }
-//     const btnContact = document.createElement('button');
-//     btnContact.innerHTML = 'CONTACT';
-//     btnContact.onclick =  () => {
-//         printPage(container, getContactpage());
-//         mainPage.classList.remove('img-background');
-//     }
-// // -------------------------------------------------------------
-
-
-//     const header = document.createElement('div');
-//     header.innerHTML = '<p>RESTAURANT</p>';
-//     header.classList.add('header');
-
-//     const tabs = document.createElement('div'); 
-//     tabs.classList.add('tabs');
-//     tabs.appendChild(btnHomePage);
-//     tabs.appendChild(btnAbout);
-//     tabs.appendChild(btnContact);
-
-//     header.appendChild(tabs);
-    
-
-
-//     const container = document.createElement('div');
-//     container.classList.add('page-container');
-//     printPage(container, getHomepage());
-
-    
-    
-//     const mainPage = document.createElement('div');
-//     mainPage.appendChild(header);
-//     mainPage.appendChild(container);
-//     mainPage.classList.add('main-page');
-//     mainPage.classList.add('img-background');
-//     return mainPage;
-// }
-
-// document.body.appendChild(component());
-
-
-
-//--------------------------------------------------------
-//--------------------------------------------------------
-//------------------------   V2   ------------------------
-//--------------------------------------------------------
-//--------------------------------------------------------
 import './style.css';
+import getFullPage from './fullPage';
+import getHeader from './header';
+import getBody from './body';
+import getFooter from './footer';
+import getHomepage from './homePage';
 import printPage from './print';
-import getFullPage from './fullPage-v2';
-import getHeader from './header-v2';
-import getBody from './body-v2';
-import getFooter from './footer-v2';
-import getHomepage from './homePage-v2';
+import getMenuPage from './menu';
+import getAboutpage from './about';
 const fullPage = getFullPage();
 const header = getHeader();
 const body = getBody();
@@ -85,6 +18,28 @@ fullPage.appendChild(header);
 fullPage.appendChild(body);
 fullPage.appendChild(footer);
 fullPage.classList.add('home-background');
+
+const buttons = header.querySelectorAll('.header-btn');
+buttons.forEach(el => {
+    el.addEventListener('click', () => {
+        const fullPage = el.parentElement.parentElement.parentElement;
+        // Check wich btn
+        switch(el.classList.value) {
+            case 'header-btn home-btn' :
+                printPage(body, getHomepage(), 'page-container');
+                fullPage.classList.add('home-background');
+                break;
+            case 'header-btn about-btn' :
+                printPage(body, getAboutpage(), 'page-container');
+                fullPage.classList.add('home-background');
+                break;
+            case 'header-btn menu-btn' :
+                printPage(body, getMenuPage(), 'page-container');
+                fullPage.classList.remove('home-background');
+                break;
+        }
+    });
+})
 
 document.body.appendChild(fullPage);
 

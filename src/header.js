@@ -9,7 +9,7 @@ export default function getHeader() {
     // Title of the page
     const title = document.createElement('p');
     title.classList.add('header-title');
-    title.innerText = 'RESTAURANT';
+    title.innerText = 'Best Coffee Shop in town';
 
     // Buttons of different pages
     const homeBtn = document.createElement('button');
@@ -17,12 +17,17 @@ export default function getHeader() {
     const aboutBtn = document.createElement('button');
 
     homeBtn.classList.add('header-btn');
+    homeBtn.classList.add('home-btn');
     menuBtn.classList.add('header-btn');
+    menuBtn.classList.add('menu-btn');
     aboutBtn.classList.add('header-btn');
+    aboutBtn.classList.add('about-btn');
+
 
     homeBtn.innerText = 'Home';
     menuBtn.innerText = 'Menu';
     aboutBtn.innerText = 'About';
+
 
     // Appending 
     headerBox.appendChild(title);

@@ -1,37 +1,74 @@
-/** {
-    padding: 0;
+
+
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */
+/* --------------- DEUXIEME VERSION --------------- */
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */
+
+
+*{
     margin: 0;
+    padding: 0;
+    
 }
+
+.full-page-container{
+    display: grid;
+    grid-template-rows: 200px 1fr 75px;
+    background-color: #b49771;
+}
+
 .header {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    color: rgb(191, 181, 165);
-    display: flex;
-    flex-direction: column; 
+    display: flex; 
     justify-content: center;
     align-items: center;
     background-color: rgba(12, 14, 9, 0.7);
     box-shadow: 0px 5px 5px 0px #080807;
 }
-.main-page {
+.header-box {
     display: grid;
-    grid-template-rows: 200px 1fr;
-    gap: 15px;
-    background-color: #b96d26;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+.header-title {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: rgb(191, 181, 165);
+    grid-column: 1/4;
 }
 
-.img-background {
-    height: 100vh;
+
+/* BACKGROUNDS DEPENDING ON PAGE */
+.home-background {
     background: url('./images/cofee-jason-villanueva.jpg');
-    background-size: 100vw auto;
+    background-size: 100vw auto; 
     background-repeat: no-repeat;
+    height: 100vh;
 }
+
+
+.header-btn {
+    font-size: 1.3rem;
+}
+
 .page-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 20px;
+    /* align-items: center; */
 }
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
 .page-element {
     background-color: rgba(206, 218, 184, 0.7);
     width: 65vw;
@@ -43,21 +80,29 @@
 }
 
 .page-title {
-    font-size: 2.5rem;
-    font-weight: 500;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: rgb(12, 14, 9);
     text-decoration: underline;
-    padding: 10px;
+    text-underline-offset: 12px;
+    padding: 20px;
 }
-
-
 
 .article-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    border: #080807 solid 8px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px 5px #080807;
+    background-color: #fcfbfa;
 }
 .article-title{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 .article-text-container {
     display: flex;
@@ -84,82 +129,17 @@
 }
 
 
-*/
-
-
-
-
-/* ------------------------------------------------ */
-/* ------------------------------------------------ */
-/* --------------- DEUXIEME VERSION --------------- */
-/* ------------------------------------------------ */
-/* ------------------------------------------------ */
-
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-.full-page-container{
+.about-page {
     display: grid;
-    grid-template-rows: 200px 1fr 100px;
-    
+    grid-template-columns: 1fr 1fr;
 }
 
-.header {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(12, 14, 9, 0.7);
-    box-shadow: 0px 5px 5px 0px #080807;
+.about-title {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
 }
-.header-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5px;
-}
-.header-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    color: rgb(191, 181, 165);
-    grid-column: 1/4;
-}
-
-
-/* BACKGROUNDS DEPENDING ON PAGE */
-.home-background {
-    background: url('./images/cofee-jason-villanueva.jpg');
-    background-size: 100vw auto; 
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-
-
-
-
-.page-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    /* align-items: center; */
-}
-
-.page-element {
-    background-color: rgba(206, 218, 184, 0.7);
-    width: 65vw;
-    box-shadow: 0px 0px 10px 5px #080807;
+.about-text{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 15px;
-}
-
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 500;
-    text-decoration: underline;
-    padding: 10px;
+    grid-column: 0/1;
 }
